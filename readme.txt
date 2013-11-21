@@ -1,5 +1,8 @@
 .Xresources
 
+Locations:
+/user/.Xresources
+
 Mostly machine-specific to my rxvt-unicode setup, with support for tabs,
 clickable urls, and a green on black color scheme as the human eye can 
 differentiate more shades in the green spectrum.
