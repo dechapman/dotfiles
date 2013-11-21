@@ -56,6 +56,10 @@ else
    PS1="\n\e[0;33m\$PWD/\n\e[0;32m$ "
 fi
 
+
+# DELETE ALL LINES BELOW
+# Machine-speficic lines in my setup
+
 COLORTERM='rxvt-xpm-mono'
 alias lowcase='convmv * -r --lower --notest'
 alias screenfix='xrandr --size 1024x768'
