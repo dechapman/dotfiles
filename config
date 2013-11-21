@@ -1,4 +1,6 @@
+# Configuration file: i3 window manager.
 # Original file modified by D. Chapman.
+
 
 # set mod key to alt
 set $mod Mod1
