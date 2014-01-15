@@ -63,3 +63,9 @@ fi
 COLORTERM='rxvt-xpm-mono'
 alias lowcase='convmv * -r --lower --notest'
 alias screenfix='xrandr --size 1024x768'
+alias am='advmame'
+alias m='mplayer -loop 0'
+alias mp='mplayer -loop 0 -shuffle -playlist'
+
+PATH=$PATH:/home/tracer/bin
+export PATH

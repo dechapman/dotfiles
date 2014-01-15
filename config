@@ -24,7 +24,7 @@ exec_always xrandr -s 1024x768 -r 85
 exec_always hsetroot -solid #000000
 
 # start window compositer cairo
-exec cairo-compmgr &
+# exec cairo-compmgr &
 
 # start screensaver, scroll lock locks screen
 exec_always --no-startup-id xscreensaver -nosplash &
@@ -32,8 +32,8 @@ bindsym Scroll_Lock exec xscreensaver-command -lock
 
 # tray applications
 exec --no-startup-id volumeicon &
-exec --no-startup-id pystopwatch &
-
+exec --no-startup-id nm-applet &
+#exec --no-startup-id pystopwatch &
 
 ##############################################################
 # WINDOW BEHAVIOR
@@ -50,7 +50,7 @@ for_window [title="pyStopwatch"] floating enable
 ##############################################################
 
 # start a terminal rxvt-unicode alt+enter
-bindsym $mod+Return exec urxvt
+bindsym $mod+u exec urxvt
 
 # keybind volume control mod+pageup/pagedown/end(mute)
 bindsym $mod+Prior exec amixer set Master 1%+
@@ -65,7 +65,7 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym Print exec sh /home/tracer/bin/smartshot.sh
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -fn -misc-fixed-*-r-*-*-20-*-*-*-*-*-*-* -nf '#fff100' -nb '#000000' -sf '#000000' -sb '#fff100'
+bindsym $mod+d exec dmenu_run -fn -*-terminus-bold-*-*-*-22-*-*-*-*-*-*-* -nf '#fff100' -nb '#000000' -sf '#000000' -sb '#fff100'
 
 # kill focused window
 bindsym $mod+Shift+Q kill
