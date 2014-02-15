@@ -1,0 +1,4 @@
+#!/bin/bash
+xcalib /home/fieldagentdci/scripts/dv6-1225ef.icc
+xrdb -merge /home/fieldagentdci/.Xresources
+xscreensaver -no-splash &
