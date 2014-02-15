@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+
+<JWM>
+   <StartupCommand>xwin_prefs</StartupCommand>
+
+   <Key mask="A" key="Return">exec:xterm</Key>
+   <Key mask="A" key="D">exec: dmenu_run -fn -*-fixed-*-*-*-*-20-*-*-*-*-*-*-* -nf '#ffff80' -nb '#000000' -sf '#000000' -sb '#ffff80'</Key>
+   <Key mask="A" key="Prior">exec:amixer set Master 1%+</Key>
+   <Key mask="A" key="Next">exec:amixer set Master 1%-</Key>
+   <Key mask="A" key="End">exec:amixer set Master 0%</Key>
+
+   <!-- The root menu, if this is undefined you will not get a menu. -->
+   <!-- Additional RootMenu attributes: onroot, labeled, label -->
+   <RootMenu height="15" onroot="12">
+      <Program icon="" label="xterm">xterm</Program>
+      <Program icon="" label="leafpad">leafpad</Program>
+      <Program icon="" label="pcmanfm">dbus-launch pcmanfm</Program>
+      <Program icon="" label="firefox">firefox</Program>
+      <Program icon="" label="midori">midori</Program>
+      <Program icon="" label="pidgin">pidgin</Program>
+      <Program icon="" label="vlc">vlc</Program>
+
+
+
+<!-- #DEBIAN
+      <Menu icon="folder.png" label="Applications">
+         <Program icon="editor.png" label="Dia">dia</Program>
+         <Program icon="www.png" label="Firefox">firefox</Program>
+         <Program icon="gimp.png" label="Gimp">gimp</Program>
+         <Program icon="mail.png" label="Mutt">
+            xterm -e mutt
+         </Program>
+         <Program icon="word-processor.png" label="Open Office">  
+            ooffice
+         </Program>
+         <Program icon="chat.png" label="Pidgin">pidgin</Program>
+         <Program icon="music.png" label="Rhythmbox">rhythmbox</Program>
+         <Program icon="development.png" label="Xilinx ISE">
+            /usr/local/xilinx/bin/ise
+         </Program>
+         <Program icon="video.png" label="Xine">gxine</Program>
+      </Menu>
+      <Menu icon="folder.png" label="Utilities">
+         <Program icon="calculator.png" label="Calculator">xcalc</Program>
+         <Program icon="font.png" label="Fonts">xfontsel</Program>
+         <Program icon="viewer.png" label="Magnify">xmag</Program>
+         <Program icon="programs.png" label="Synaptic">
+            gksudo synaptic
+         </Program>
+         <Program icon="window.png" label="Window Properties">
+            xprop | xmessage -file -
+         </Program>
+      </Menu>
+-->
+	  <Separator/>
+      <Separator/>
+      <Menu icon="" label="Session">
+			<Program label="Lock">exec xscreensaver-command -lock</Program>
+			<Restart label="Restart" icon="restart.png"/>
+			<Exit label="Exit-X" confirm="false"/>
+			<Program label="Suspend">exec sudo pm-suspend</Program>
+			<Program label="Reboot">exec sudo reboot</Program>
+			<Program label="Shutdown">exec sudo halt</Program>
+	  </Menu>
+   </RootMenu>
+
+   <Group>
+      <Class>Pidgin</Class>
+      <Option>sticky</Option>
+   </Group>
+
+   <Group>
+      <Name>xterm</Name>
+      <Option>vmax</Option>
+      <Option>icon:terminal.png</Option>
+   </Group>
+
+   <!-- Additional tray attributes: autohide, width, border, layer, layout -->
+   <Tray  x="0" y="-1" height="32" autohide="false">
+
+      <!-- Additional TrayButton attribute: label -->
+      <TrayButton label="DCINET">root:1</TrayButton>
+
+      <TrayButton label="_">showdesktop</TrayButton>
+
+      <!-- Additional Pager attribute: labeled -->
+      
+
+      <TaskList maxwidth="256"/>
+
+      <Dock/>
+
+      <!-- Additional Swallow attribute: height -->
+
+      <Pager labeled="true"/>
+      
+      <Clock format="%a %I:%M %p">xclock</Clock>
+
+   </Tray>
+
+   <!-- Visual Styles -->
+
+   <WindowStyle>
+
+      <Font>-*-fixed-*-r-*-*-20-*-*-*-*-*-*-*</Font>
+      <Width>4</Width>
+      <Height>20</Height>
+
+      <Active>
+         <Text>#151515</Text>
+         <Title>#fafafa</Title>
+         <Outline>#151515</Outline>
+         <Opacity>1.0</Opacity>
+      </Active>
+
+      <Inactive>
+         <Text>#f6f6f6</Text>
+         <Title>#3f3f3f</Title>
+         <Outline>#d3d3d3</Outline>
+         <Opacity>0.5:0.9:0.1</Opacity>
+      </Inactive>
+
+   </WindowStyle>
+
+   <TaskListStyle>
+      <Font>-*-fixed-*-r-*-*-10-*-*-*-*-*-*-*</Font>
+      <ActiveForeground>#151515</ActiveForeground>
+      <ActiveBackground>#fafafa</ActiveBackground>
+      <Foreground>#f6f6f6</Foreground>
+      <Background>#3f3f3f</Background>
+   </TaskListStyle>
+
+   <!-- Additional TrayStyle attribute: insert -->
+   <TrayStyle>
+      <Font>-*-fixed-*-r-*-*-10-*-*-*-*-*-*-*</Font>
+      <Background>#151515</Background>
+      <Foreground>#f6f6f6</Foreground>
+      <Opacity>0.75</Opacity>
+   </TrayStyle>
+
+   <PagerStyle>
+      <Outline>#fafafa</Outline>
+      <Foreground>#151515</Foreground>
+      <Background>#696969</Background>
+      <ActiveForeground>#ff0000</ActiveForeground>
+      <ActiveBackground>#ff0000</ActiveBackground>
+   </PagerStyle>
+
+   <MenuStyle>
+      <Font>-*-fixed-*-r-*-*-10-*-*-*-*-*-*-*</Font>
+      <Foreground>#f6f6f6</Foreground>
+      <Background>#3f3f3f</Background>
+      <ActiveForeground>#151515</ActiveForeground>
+      <ActiveBackground>#fafafa</ActiveBackground>
+      <Opacity>0.85</Opacity>
+   </MenuStyle>
+
+   <PopupStyle>
+      <Font>-*-fixed-*-r-*-*-10-*-*-*-*-*-*-*</Font>
+      <Outline>#ff0000</Outline>
+      <Foreground>#000000</Foreground>
+      <Background>#fafafa</Background>
+   </PopupStyle>
+
+   <IconPath>
+      /usr/share/icons/wm-icons/32x32-gant
+   </IconPath>
+
+   <!-- Virtual Desktops -->
+   <!-- Desktop tags can be contained within Desktops for desktop names. -->
+   <Desktops width="4" height="2">
+      <!-- Default background. Note that a Background tag can be
+           contained within a Desktop tag to give a specific background
+           for that desktop.
+       -->
+      <Background type="image">/export0/images/formulae.jpg</Background>
+   </Desktops>
+
+   <!-- Double click speed (in milliseconds) -->
+   <DoubleClickSpeed>400</DoubleClickSpeed>
+
+   <!-- Double click delta (in pixels) -->
+   <DoubleClickDelta>2</DoubleClickDelta>
+
+   <!-- The focus model (sloppy or click) -->
+   <FocusModel>sloppy</FocusModel>
+
+   <!-- The snap mode (none, screen, or border) -->
+   <SnapMode distance="10">border</SnapMode>
+
+   <!-- The move mode (outline or opaque) -->
+   <MoveMode>opaque</MoveMode>
+
+   <!-- The resize mode (outline or opaque) -->
+   <ResizeMode>opaque</ResizeMode>
+
+   <!-- Key bindings -->
+
+   <Key key="Up">up</Key>
+   <Key key="Down">down</Key>
+   <Key key="Right">right</Key>
+   <Key key="Left">left</Key>
+   <Key key="h">left</Key>
+   <Key key="j">down</Key>
+   <Key key="k">up</Key>
+   <Key key="l">right</Key>
+   <Key key="Return">select</Key>
+   <Key key="Escape">escape</Key>
+
+   <Key mask="A" key="Tab">next</Key>
+   <Key mask="A" key="F4">close</Key>
+   <Key mask="A" key="#">desktop#</Key>
+   <Key mask="A" key="F1">root:1</Key>
+   <Key mask="A" key="F2">window</Key>
+   <Key mask="A" key="F10">maximize</Key>
+   <Key mask="A" key="Right">rdesktop</Key>
+   <Key mask="A" key="Left">ldesktop</Key>
+   <Key mask="A" key="Up">udesktop</Key>
+   <Key mask="A" key="Down">ddesktop</Key>
+
+</JWM>
+
